@@ -1,29 +1,30 @@
 import { Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './modules/auth/login/login.component';
-import { NewHomeComponent } from './modules/home/new-home/new-home.component';
+
 import { LNadvarComponent } from './modules/nadvar/l-nadvar/l-nadvar.component';
 import { UNadvarComponent } from './modules/nadvar/u-nadvar/u-nadvar.component';
+import { HomeModule } from './modules/home/home.module';
 
 export const routes: Routes = [
     {
-       path:"homeModuls", 
-       component:NewHomeComponent
+       path:"home", 
+       component:HomeModule
     },
     {
-        path:"homeModuls", 
+        path:"auth/login", 
         component:LoginComponent
      },
      {
-      path:"homeModuls", 
+      path:"lnadvar", 
       component:LNadvarComponent
      },
      {
-      path:"homeModuls",
+      path:"unadvar",
       component:UNadvarComponent
      },
      {
       path:"homeModuls", 
-      loadChildren: ()=> import ("./modules/plantilla/plantilla.module").then(m => m.PlantillaModule)
+      loadChildren: ()=> import ("./modules/plantilla/formu-plantilla/formu-plantilla.component").then(m => m.FormuPlantillaComponent)
      }
 ];
