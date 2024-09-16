@@ -5,6 +5,7 @@ import { LoginComponent } from './modules/auth/login/login.component';
 import { LNadvarComponent } from './modules/nadvar/l-nadvar/l-nadvar.component';
 import { UNadvarComponent } from './modules/nadvar/u-nadvar/u-nadvar.component';
 import { HomeModule } from './modules/home/home.module';
+import { FormComponent } from './modules/auth/form/form.component';
 
 export const routes: Routes = [
     {
@@ -14,6 +15,10 @@ export const routes: Routes = [
     {
         path:"auth/login", 
         component:LoginComponent
+     },
+     {
+      path:"auth/form",
+      component:FormComponent
      },
      {
       path:"lnadvar", 
